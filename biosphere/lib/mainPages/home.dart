@@ -3,6 +3,7 @@ import 'package:biosphere/mainPages/categories.dart';
 import 'package:biosphere/mainPages/newEncounter.dart';
 import 'package:flutter/material.dart';
 import 'package:biosphere/designConstraints/colors.dart';
+import 'package:simple_speed_dial/simple_speed_dial.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -96,42 +97,48 @@ class HomeState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.auto_graph),
-            label: 'Stats',
-            backgroundColor: Color.fromARGB(255, 43, 92, 66),
+      floatingActionButton: SpeedDial(
+        closedForegroundColor: textOnDark,
+        openForegroundColor: textOnDark,
+        closedBackgroundColor: buttons,
+        openBackgroundColor: buttons,
+        child: Icon(Icons.menu, size: 35.0),
+        speedDialChildren: <SpeedDialChild>[
+          SpeedDialChild(
+            child: Icon(Icons.home, size: 30.0),
+            foregroundColor: textOnDark,
+            backgroundColor: buttons,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'Categories',
-            backgroundColor: Color.fromARGB(255, 43, 92, 66),
+          SpeedDialChild(
+            child: Icon(Icons.category_rounded, size: 30.0),
+            foregroundColor: textOnDark,
+            backgroundColor: buttons,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CategoriesPage()),
+              );
+            },
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt_rounded),
-            label: 'All Encounters',
-            backgroundColor: Color.fromARGB(255, 43, 92, 66),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.create),
-            label: 'Create',
-            backgroundColor: Color.fromARGB(255, 43, 92, 66),
+          SpeedDialChild(
+            child: Icon(Icons.create_rounded, size: 30.0),
+            foregroundColor: textOnDark,
+            backgroundColor: buttons,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CreatePage()),
+              );
+            },
           ),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: textOnDark,
-        unselectedItemColor: icons,
-        onTap: _onItemTapped,
       ),
-
-      // Here the welcome-title as a photo
-
-      // Here the card with the latest entry
-
-      // Here the graph with categories
-
-      // Here the bottom menue
     );
   }
 }
