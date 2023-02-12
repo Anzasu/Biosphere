@@ -1,3 +1,4 @@
+import 'package:biosphere/categoryLists/allList.dart';
 import 'package:biosphere/mainPages/home.dart';
 import 'package:biosphere/mainPages/newEncounter.dart';
 import 'package:biosphere/mainPages/noEntryMessage.dart';
@@ -78,7 +79,7 @@ class CategorieState extends State<CategoriesPage> {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                    MaterialPageRoute(builder: (context) => AllListPage()),
                   );
                 },
                 child: Text(

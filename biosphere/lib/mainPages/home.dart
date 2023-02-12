@@ -52,47 +52,50 @@ class HomeState extends State<HomePage> {
               style: TextStyle(color: textOnLight, fontSize: 30),
               textAlign: TextAlign.center,
             ),
-            Card(
-              clipBehavior: Clip.antiAlias,
-              color: buttons,
-              // img assate here
-              child: Column(
-                children: [
-                  ListTile(
-                    title: const Text(
-                      "Object Name",
-                      style: TextStyle(fontSize: 30),
+            Container(
+              child: Card(
+                clipBehavior: Clip.antiAlias,
+                color: buttons,
+                // img assate here
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: const Text(
+                        "Object Name",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      subtitle: const Text("Date"),
+                      textColor: textOnDark,
                     ),
-                    subtitle: const Text("Date"),
-                    textColor: textOnDark,
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                ],
+                    SizedBox(
+                      height: 100,
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
               height: 50,
             ),
-            Card(
-              clipBehavior: Clip.antiAlias,
-              color: buttons,
-              child: Column(
-                children: [
-                  ListTile(
-                    title: const Text(
-                      "Your encounters so far:",
-                      style: TextStyle(fontSize: 30),
+            Container(
+              child: Card(
+                clipBehavior: Clip.antiAlias,
+                color: buttons,
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: const Text(
+                        "Your encounters so far:",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      textColor: textOnDark,
                     ),
-                    textColor: textOnDark,
-                  ),
-                  SizedBox(
-                    height: 250,
-                  )
-                ],
-              ),
-              // statistics here
+                    SizedBox(
+                      height: 250,
+                    )
+                  ],
+                ),
+              ), // statistics here
             ),
           ],
         ),
