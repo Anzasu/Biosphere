@@ -71,18 +71,18 @@ class CategorieState extends State<CategoriesPage> {
                     fontSize: 37,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 35),
               Text(
                 "Animals",
                 style: TextStyle(color: textOnLight, fontSize: 37),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
                 },
                 child: Text(
-                  "Aquatic Animals",
+                  "Mamals",
                   style: TextStyle(fontSize: 30.0, color: textOnDark),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -94,7 +94,7 @@ class CategorieState extends State<CategoriesPage> {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
                 },
                 child: Text(
-                  "Terrestrial Animals",
+                  "Fish",
                   style: TextStyle(fontSize: 30.0, color: textOnDark),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -131,6 +131,83 @@ class CategorieState extends State<CategoriesPage> {
                 },
                 child: Text(
                   "Amphibians",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Reptiles",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              Text(
+                "Plants",
+                style: TextStyle(color: textOnLight, fontSize: 37),
+              ),
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Trees",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Shrubs",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Flowers",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Grasses",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Fruits/ Vegetables",
                   style: TextStyle(fontSize: 30.0, color: textOnDark),
                 ),
                 style: ElevatedButton.styleFrom(
