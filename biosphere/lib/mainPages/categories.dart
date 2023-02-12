@@ -1,5 +1,6 @@
 import 'package:biosphere/mainPages/home.dart';
 import 'package:biosphere/mainPages/newEncounter.dart';
+import 'package:biosphere/mainPages/noEntryMessage.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_speed_dial/simple_speed_dial.dart';
 
@@ -71,6 +72,22 @@ class CategorieState extends State<CategoriesPage> {
                     fontSize: 37,
                     fontWeight: FontWeight.bold),
               ),
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
+                },
+                child: Text(
+                  "All Encounters",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
               SizedBox(height: 35),
               Text(
                 "Animals",
@@ -80,6 +97,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Mamals",
@@ -92,6 +113,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Fish",
@@ -104,6 +129,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Birds",
@@ -116,6 +145,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Insects",
@@ -128,6 +161,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Amphibians",
@@ -140,6 +177,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Reptiles",
@@ -157,6 +198,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Trees",
@@ -169,6 +214,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Shrubs",
@@ -181,6 +230,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Flowers",
@@ -193,6 +246,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Grasses",
@@ -205,6 +262,10 @@ class CategorieState extends State<CategoriesPage> {
               ElevatedButton(
                 onPressed: () {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyPage()),
+                  );
                 },
                 child: Text(
                   "Fruits/ Vegetables",

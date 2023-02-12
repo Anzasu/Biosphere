@@ -3,6 +3,7 @@ import 'package:biosphere/mainPages/categories.dart';
 import 'package:biosphere/mainPages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_speed_dial/simple_speed_dial.dart';
+import 'package:image_picker/image_picker.dart';
 
 class CreatePage extends StatefulWidget {
   const CreatePage({super.key});
@@ -12,6 +13,19 @@ class CreatePage extends StatefulWidget {
 }
 
 class CreateState extends State<CreatePage> {
+  XFile? image;
+
+  final ImagePicker picker = ImagePicker();
+
+  //we can upload image from camera or from gallery based on parameter
+  Future getImage(ImageSource media) async {
+    var img = await picker.pickImage(source: media);
+
+    setState(() {
+      image = img;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +71,57 @@ class CreateState extends State<CreatePage> {
             },
           ),
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              Text(
+                "Save your encounter!",
+                style: TextStyle(
+                    color: textOnLight,
+                    fontSize: 37,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Add Image",
+                style: TextStyle(
+                  color: textOnLight,
+                  fontSize: 30,
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                //if user click this button, user can upload image from gallery
+                onPressed: () {
+                  Navigator.pop(context);
+                  getImage(ImageSource.gallery);
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.image),
+                    Text(
+                      'From Gallery',
+                      style: TextStyle(
+                        color: textOnDark,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(178, 75)),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
