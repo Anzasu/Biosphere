@@ -59,6 +59,88 @@ class CategorieState extends State<CategoriesPage> {
           ),
         ],
       ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 60),
+              Text(
+                "Categories",
+                style: TextStyle(
+                    color: textOnLight,
+                    fontSize: 37,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 50),
+              Text(
+                "Animals",
+                style: TextStyle(color: textOnLight, fontSize: 37),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Aquatic Animals",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Terrestrial Animals",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Birds",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Insects",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
+                },
+                child: Text(
+                  "Amphibians",
+                  style: TextStyle(fontSize: 30.0, color: textOnDark),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: buttons, fixedSize: Size(300, 100)),
+              ),
+              SizedBox(height: 50),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
