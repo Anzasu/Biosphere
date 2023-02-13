@@ -6,7 +6,7 @@ By documenting your encounters with nature, you become aware of how complex and 
 
 ## What it does
 The app allows you to save encounters with animals or plants in the form of an entry. These are then saved in one of the following categories:
-mamals, fish, reptiles, amphibias, brids, insects, trees, shrubs, flowers, grasses, fruits/vegetables
+mammals, fish, reptiles, amphibias, brids, insects, trees, shrubs, flowers, grasses, fruits/vegetables
 
 The user has the option to enter photos, the name, the genus/family and a description of the object. On the start page, the most recent entry is displayed, as well as statistics with how many entries per category the user has entered. 
 

@@ -1,7 +1,7 @@
 import 'package:biosphere/categoryLists/allList.dart';
 import 'package:biosphere/categoryLists/birdList.dart';
 import 'package:biosphere/categoryLists/flowerList.dart';
-import 'package:biosphere/categoryLists/mamalList.dart';
+import 'package:biosphere/categoryLists/mammalList.dart';
 import 'package:biosphere/categoryLists/treeList.dart';
 import 'package:biosphere/mainPages/home.dart';
 import 'package:biosphere/mainPages/newEncounter.dart';
@@ -104,11 +104,11 @@ class CategorieState extends State<CategoriesPage> {
                   // Weiterleiten zur Seite mit der Liste aller Einträge dieser Kategorie
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MamalListPage()),
+                    MaterialPageRoute(builder: (context) => mammalListPage()),
                   );
                 },
                 child: Text(
-                  "Mamals",
+                  "Mammals",
                   style: TextStyle(fontSize: 30.0, color: textOnDark),
                 ),
                 style: ElevatedButton.styleFrom(

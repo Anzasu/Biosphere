@@ -8,14 +8,14 @@ import 'package:biosphere/mainPages/noEntryMessage.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_speed_dial/simple_speed_dial.dart';
 
-class MamalListPage extends StatefulWidget {
-  const MamalListPage({super.key});
+class mammalListPage extends StatefulWidget {
+  const mammalListPage({super.key});
 
   @override
-  State<MamalListPage> createState() => MamalListState();
+  State<mammalListPage> createState() => mammalListState();
 }
 
-class MamalListState extends State<MamalListPage> {
+class mammalListState extends State<mammalListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

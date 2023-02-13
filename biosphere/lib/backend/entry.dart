@@ -13,8 +13,8 @@ class Entry {
 Entry bird = Entry("Kingfisher", "alcedo atthis", "They can dive really fast",
     "bird", "imgs/eisvogel.jpg");
 
-Entry mamal = Entry("Cat", "felis catus", "They purr, when they are happy",
-    "mamal", "imgs/katze.jpg");
+Entry mammal = Entry("Cat", "felis catus", "They purr, when they are happy",
+    "mammal", "imgs/katze.jpg");
 
 Entry tree = Entry(
     "Baobab",
@@ -26,4 +26,4 @@ Entry tree = Entry(
 Entry flower = Entry("Sunflower", "Helianthus annuus", "The seeds are edible",
     "flower", "imgs/sonnenblume.jpg");
 
-List<Entry> allEntries = [bird, mamal, tree, flower];
+List<Entry> allEntries = [bird, mammal, tree, flower];

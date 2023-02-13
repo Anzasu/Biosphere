@@ -31,16 +31,9 @@ class HomeState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              Image(image: AssetImage('imgs/welcome.png')),
               SizedBox(
-                height: 50,
-              ),
-              Text(
-                "Welcome Bild hier",
-                style: TextStyle(color: textOnLight, fontSize: 40),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(
-                height: 40,
+                height: 10,
               ),
               Text(
                 "Latest encounter:",
@@ -111,6 +104,9 @@ class HomeState extends State<HomePage> {
                   ),
                 ), // statistics here
               ),
+              SizedBox(
+                height: 60,
+              )
             ],
           ),
         ),

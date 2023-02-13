@@ -28,7 +28,7 @@ class CreateState extends State<CreatePage> {
   int _value = 0;
 
   List<String> categoryList = [
-    "Mamals",
+    "mammals",
     "Fish",
     "Birds",
     "Insects",
