@@ -17,14 +17,29 @@ class CreateState extends State<CreatePage> {
 
   final ImagePicker picker = ImagePicker();
 
-  //we can upload image from camera or from gallery based on parameter
-  Future getImage(ImageSource media) async {
-    var img = await picker.pickImage(source: media);
+  //Future getImage(ImageSource media) async {
+  //var img = await picker.pickImage(source: media);
 
-    setState(() {
-      image = img;
-    });
-  }
+  //setState(() {
+  //  image = img;
+  //});}
+
+  String chosenOne = "";
+  int _value = 0;
+
+  List<String> categoryList = [
+    "Mamals",
+    "Fish",
+    "Birds",
+    "Insects",
+    "Amphibians",
+    "Reptiles",
+    "Trees",
+    "Shrubs",
+    "Flowers",
+    "Grasses",
+    "Fruits/Vegetables",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -100,8 +115,8 @@ class CreateState extends State<CreatePage> {
               ElevatedButton(
                 //if user click this button, user can upload image from gallery
                 onPressed: () {
-                  Navigator.pop(context);
-                  getImage(ImageSource.gallery);
+                  // Navigator.pop(context);
+                  // getImage(ImageSource.gallery);
                 },
                 child: Row(
                   children: [
@@ -115,10 +130,108 @@ class CreateState extends State<CreatePage> {
                     ),
                   ],
                 ),
-
                 style: ElevatedButton.styleFrom(
                     backgroundColor: buttons, fixedSize: Size(178, 75)),
               ),
+              SizedBox(height: 50),
+              Text(
+                "Name",
+                style: TextStyle(
+                  color: textOnLight,
+                  fontSize: 30,
+                ),
+              ),
+              SizedBox(
+                width: 350,
+                child: TextFormField(
+                  onChanged: (String? value) {},
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: buttons,
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
+                  maxLength: 50,
+                  maxLines: 1,
+                  cursorColor: textOnDark,
+                ),
+              ),
+              SizedBox(height: 50),
+              Text(
+                "Latin name",
+                style: TextStyle(
+                  color: textOnLight,
+                  fontSize: 30,
+                ),
+              ),
+              SizedBox(
+                width: 350,
+                child: TextFormField(
+                  onChanged: (String? value) {},
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: buttons,
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
+                  maxLength: 50,
+                  maxLines: 1,
+                  cursorColor: textOnDark,
+                ),
+              ),
+              SizedBox(height: 50),
+              Text(
+                "Fun fact",
+                style: TextStyle(
+                  color: textOnLight,
+                  fontSize: 30,
+                ),
+              ),
+              SizedBox(
+                width: 350,
+                child: TextField(
+                  onChanged: (String? value) {},
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: buttons,
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
+                  cursorColor: textOnDark,
+                ),
+              ),
+              SizedBox(height: 50),
+              Text(
+                "Category",
+                style: TextStyle(
+                  color: textOnLight,
+                  fontSize: 30,
+                ),
+              ),
+              Wrap(
+                children: List<Widget>.generate(
+                  categoryList.length,
+                  (int i) {
+                    return ChoiceChip(
+                        label: Text(categoryList[i]),
+                        selected: _value == i,
+                        selectedColor: selected,
+                        onSelected: (bool selected) {
+                          setState(() {
+                            _value = (selected ? i : null)!;
+                            chosenOne = categoryList[i];
+                          });
+                        });
+                  },
+                ).toList(),
+              ),
+              SizedBox(height: 50),
             ],
           ),
         ),

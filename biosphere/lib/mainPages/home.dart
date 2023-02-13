@@ -1,4 +1,3 @@
-import 'package:biosphere/mainPages/allEncounters.dart';
 import 'package:biosphere/mainPages/categories.dart';
 import 'package:biosphere/mainPages/newEncounter.dart';
 import 'package:flutter/material.dart';
@@ -17,12 +16,6 @@ class HomeState extends State<HomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
-    CategoriesPage(),
-    AllPage(),
-    CreatePage(),
-  ];
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
