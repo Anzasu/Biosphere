@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:biosphere/backend/entry.dart';
 import 'package:biosphere/designConstraints/colors.dart';
 import 'package:biosphere/mainPages/categories.dart';
+import 'package:biosphere/mainPages/entryTemplate.dart';
 import 'package:biosphere/mainPages/home.dart';
 import 'package:biosphere/mainPages/newEncounter.dart';
 import 'package:flutter/material.dart';
@@ -204,7 +205,8 @@ class AllListState extends State<AllListPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AllListPage()),
+                      MaterialPageRoute(
+                          builder: (context) => EntryPage(allEntries[3])),
                     );
                   },
                   style: ElevatedButton.styleFrom(
