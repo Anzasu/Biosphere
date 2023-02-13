@@ -76,7 +76,8 @@ class AllListState extends State<AllListPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AllListPage()),
+                      MaterialPageRoute(
+                          builder: (context) => EntryPage(allEntries[0])),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -119,7 +120,8 @@ class AllListState extends State<AllListPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AllListPage()),
+                      MaterialPageRoute(
+                          builder: (context) => EntryPage(allEntries[1])),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -162,7 +164,8 @@ class AllListState extends State<AllListPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AllListPage()),
+                      MaterialPageRoute(
+                          builder: (context) => EntryPage(allEntries[2])),
                     );
                   },
                   style: ElevatedButton.styleFrom(

@@ -1,3 +1,4 @@
+import 'package:biosphere/backend/entry.dart';
 import 'package:biosphere/mainPages/categories.dart';
 import 'package:biosphere/mainPages/newEncounter.dart';
 import 'package:flutter/material.dart';
@@ -27,70 +28,91 @@ class HomeState extends State<HomePage> {
     return Scaffold(
       backgroundColor: background,
       body: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 50,
-            ),
-            Text(
-              "Welcome here",
-              style: TextStyle(color: textOnLight, fontSize: 40),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Text(
-              "Latest encounter:",
-              style: TextStyle(color: textOnLight, fontSize: 30),
-              textAlign: TextAlign.center,
-            ),
-            Container(
-              child: Card(
-                clipBehavior: Clip.antiAlias,
-                color: buttons,
-                // img assate here
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: const Text(
-                        "Object Name",
-                        style: TextStyle(fontSize: 30),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              Text(
+                "Welcome Bild hier",
+                style: TextStyle(color: textOnLight, fontSize: 40),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Text(
+                "Latest encounter:",
+                style: TextStyle(color: textOnLight, fontSize: 30),
+                textAlign: TextAlign.center,
+              ),
+              Container(
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  color: buttons,
+                  // img assate here
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 15,
                       ),
-                      subtitle: const Text("Date"),
-                      textColor: textOnDark,
-                    ),
-                    SizedBox(
-                      height: 100,
-                    ),
-                  ],
+                      Image(
+                          width: 200,
+                          height: 180,
+                          image: AssetImage('imgs/sonnenblume.jpg')),
+                      ListTile(
+                        title: Text(
+                          allEntries[3].name,
+                          style: TextStyle(fontSize: 30),
+                          textAlign: TextAlign.center,
+                        ),
+                        subtitle: Text(
+                          allEntries[3].latinName,
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        textColor: textOnDark,
+                      ),
+                      SizedBox(height: 15),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            Container(
-              child: Card(
-                clipBehavior: Clip.antiAlias,
-                color: buttons,
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: const Text(
-                        "Your encounters so far:",
-                        style: TextStyle(fontSize: 30),
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  color: buttons,
+                  child: Column(
+                    children: [
+                      ListTile(
+                        title: const Text(
+                          "Your encounters so far:",
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        textColor: textOnDark,
                       ),
-                      textColor: textOnDark,
-                    ),
-                    SizedBox(
-                      height: 250,
-                    )
-                  ],
-                ),
-              ), // statistics here
-            ),
-          ],
+                      SizedBox(
+                        height: 20,
+                      ),
+                      ListTile(
+                        title: const Text(
+                          "No statistics available",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        textColor: textOnDark,
+                      ),
+                    ],
+                  ),
+                ), // statistics here
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: SpeedDial(

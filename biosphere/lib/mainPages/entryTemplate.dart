@@ -12,15 +12,10 @@ class EntryPage extends StatefulWidget {
   Entry get entry => entry;
 
   @override
-  State<EntryPage> createState() => EntryState(entry);
+  State<EntryPage> createState() => EntryState();
 }
 
 class EntryState extends State<EntryPage> {
-  EntryState(Entry entry);
-
-  static Entry get entry => entry;
-  Entry chosenEntry = entry;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,20 +27,20 @@ class EntryState extends State<EntryPage> {
               height: 50,
             ),
             Text(
-              entry.name,
+              widget.entry.name,
               style: TextStyle(color: textOnLight, fontSize: 40),
               textAlign: TextAlign.center,
             ),
             SizedBox(
               height: 60,
             ),
-            Image(image: AssetImage(entry.image)),
+            Image(image: AssetImage(widget.entry.image)),
             SizedBox(
               height: 30,
             ),
             Container(
               child: Text(
-                entry.latinName,
+                widget.entry.latinName,
                 style: TextStyle(color: textOnDark, fontSize: 20),
                 textAlign: TextAlign.center,
               ),
@@ -53,7 +48,7 @@ class EntryState extends State<EntryPage> {
             ),
             Container(
               child: Text(
-                entry.funfact,
+                widget.entry.funfact,
                 style: TextStyle(color: textOnDark, fontSize: 20),
                 textAlign: TextAlign.center,
               ),
